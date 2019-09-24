@@ -18,10 +18,10 @@ import java.util.concurrent.TimeUnit;
 import static org.apache.storm.kafka.spout.KafkaSpoutConfig.FirstPollOffsetStrategy.LATEST;
 
 /**
- * 使用Storm消费Kafka数据，构建Storm拓扑（使用TopologyBuilder）
+ * 使用Storm消费Kafka数据（Json格式：MessageData），构建Storm拓扑（使用TopologyBuilder）
  * 实现SentenceBolt、PrinterBolt
  */
-public class KafkaTopologyBasic {
+public class KafkaTopologyJson {
 
     /**
      * JUST_VALUE_FUNC为kafka消息翻译函数
@@ -63,14 +63,14 @@ public class KafkaTopologyBasic {
     public StormTopology buildTopology() {
         TopologyBuilder builder = new TopologyBuilder();
         builder.setSpout("KafkaSpout", new KafkaSpout<String, String>(newKafkaSpoutConfig()), 1);
-        builder.setBolt("SentenceBolt", new SentenceBolt(), 1).globalGrouping("KafkaSpout");
-        builder.setBolt("PrinterBolt", new PrinterBolt(), 1).globalGrouping("SentenceBolt");
+        //builder.setBolt("SentenceBolt", new SentenceBolt(), 1).globalGrouping("KafkaSpout");
+        builder.setBolt("MessagePrintBolt", new MessagePrintBolt(), 1).globalGrouping("KafkaSpout");
         return builder.createTopology();
     }
 
     public static void main(String[] args) {
         // 1 创建拓扑
-        KafkaTopologyBasic kb = new KafkaTopologyBasic();
+        KafkaTopologyJson kb = new KafkaTopologyJson();
         StormTopology topology = kb.buildTopology();
 
         // 2 创建配置信息对象

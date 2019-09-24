@@ -30,6 +30,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
+                            <!--生成jar包的主类-->
                             <mainClass>org.mort.storm.kafka.KafkaTopologyBasic</mainClass>
                         </manifest>
                     </archive>
@@ -70,18 +71,12 @@
             <artifactId>guava</artifactId>
             <version>26.0-jre</version>
         </dependency>
-
-        <!-- 	<dependency> -->
-        <!-- 		<groupId>org.apache.storm</groupId> -->
-        <!-- 		<artifactId>storm-kafka</artifactId> -->
-        <!-- 		<version>1.2.2</version> -->
-        <!-- 	</dependency> -->
-        <!-- storm核心依赖 -->
         <dependency>
             <groupId>org.apache.storm</groupId>
             <artifactId>storm-core</artifactId>
             <version>1.2.3</version>
-            <scope>provided</scope>
+            <!--本地运行取消注释，生成jar在集群运行需添加注释-->
+            <!--<scope>provided</scope>-->
         </dependency>
         <!-- storm-kafka连接客户端 -->
         <dependency>
@@ -96,16 +91,11 @@
             <version>2.0.1</version>
             <!-- <scope>${provided.scope}</scope> -->
         </dependency>
-        <!-- <dependency> -->
-        <!-- <groupId>org.apache.kafka</groupId> -->
-        <!-- <artifactId>kafka_2.11</artifactId> -->
-        <!-- <version>0.8.2.1</version> -->
-        <!-- </dependency> -->
-
-        <!--<dependency>-->
-            <!--<groupId>junit</groupId>-->
-            <!--<artifactId>junit</artifactId>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.61</version>
+        </dependency>
     </dependencies>
 </project>
