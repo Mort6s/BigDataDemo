@@ -6,6 +6,7 @@
 * HBase
 * OpenTSDB
 * Kafka
+* Storm
 * ……
 
 ## 运行环境

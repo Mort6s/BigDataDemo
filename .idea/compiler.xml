@@ -9,6 +9,7 @@
         <module name="hbase-demo" />
         <module name="kafka-demo" />
         <module name="opentsdb-demo" />
+        <module name="storm-demo" />
         <module name="webservice-demo" />
       </profile>
     </annotationProcessing>
@@ -17,6 +18,7 @@
       <module name="hbase-demo" target="1.5" />
       <module name="kafka-demo" target="1.7" />
       <module name="opentsdb-demo" target="1.6" />
+      <module name="storm-demo" target="1.6" />
       <module name="webservice-demo" target="1.5" />
     </bytecodeTargetLevel>
   </component>

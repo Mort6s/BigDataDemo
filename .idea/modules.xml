@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/hbase-demo/hbase-demo.iml" filepath="$PROJECT_DIR$/hbase-demo/hbase-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/kafka-demo/kafka-demo.iml" filepath="$PROJECT_DIR$/kafka-demo/kafka-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/opentsdb-demo/opentsdb-demo.iml" filepath="$PROJECT_DIR$/opentsdb-demo/opentsdb-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/storm-demo/storm-demo.iml" filepath="$PROJECT_DIR$/storm-demo/storm-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/webservice-demo/webservice-demo.iml" filepath="$PROJECT_DIR$/webservice-demo/webservice-demo.iml" />
     </modules>
   </component>
